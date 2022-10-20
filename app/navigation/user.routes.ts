@@ -1,6 +1,6 @@
-import Auth from '@app/components/screens/auth/Auth';
-import Home from '@app/components/screens/home/Home';
+import { Auth, Home } from '@app/components/screens';
 
+import { adminRoutes } from './admin.routes';
 import { Route } from './navigation.types';
 
 export const userRoutes: Route[] = [
@@ -13,3 +13,5 @@ export const userRoutes: Route[] = [
 		component: Auth
 	}
 ];
+
+export const routes = [...userRoutes, ...adminRoutes];

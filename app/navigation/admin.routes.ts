@@ -1,7 +1,7 @@
-import Admin from '@app/components/screens/admin/home/Admin';
+import { AdminHome } from '@app/components/screens';
 
 import { Route } from './navigation.types';
 
 export const adminRoutes: Route[] = [
-	{ name: 'Admin', component: Admin, isAdmin: true }
+	{ name: 'Admin', component: AdminHome, isAdmin: true }
 ];
