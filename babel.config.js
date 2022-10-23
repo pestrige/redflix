@@ -10,7 +10,8 @@ module.exports = function (api) {
 					rootPathPrefix: '@app/'
 				}
 			],
-			['nativewind/babel']
+			['nativewind/babel'],
+			['inline-dotenv']
 		]
 	};
 };

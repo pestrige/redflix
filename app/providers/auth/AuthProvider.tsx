@@ -7,6 +7,11 @@ import {
 	useState
 } from 'react';
 
+import {
+	getAccessToken,
+	getUserFromStorage
+} from '@app/services/auth/auth.helpers';
+
 import { IAuthContext, UserState } from './auth-provider.interface';
 
 const initContext = {
@@ -24,18 +29,26 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	const [user, setUser] = useState<UserState>(null);
 
 	useEffect(() => {
-		let mounted = true;
+		let isMounted = true;
 
 		(async () => {
 			try {
-			} catch (e) {
+				const accessToken = await getAccessToken();
+				if (!accessToken) {
+					return;
+				}
+				const user = await getUserFromStorage();
+				if (isMounted) {
+					setUser(user);
+				}
+			} catch {
 			} finally {
 				await SplashScreen.hideAsync();
 			}
 		})();
 
 		return () => {
-			mounted = false;
+			isMounted = false;
 		};
 	}, []);
 

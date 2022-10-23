@@ -1,10 +1,12 @@
-import { useAuth, useTypedNavigation, useTypedRoute } from '@app/hooks';
+import { useAuth } from '@app/hooks';
 import { BottomMenu } from '@app/layout';
 import {
 	NavigationContainer,
 	useNavigationContainerRef
 } from '@react-navigation/native';
 import { FC, useEffect, useState } from 'react';
+
+import { useCheckAuth } from '@app/providers/auth/useCheckAuth';
 
 import PrivateNavigator from './PrivateNavigator';
 
@@ -14,9 +16,6 @@ const Navigation: FC = () => {
 		undefined
 	);
 	const navigationRef = useNavigationContainerRef();
-	// const { navigate } = useTypedNavigation();
-	// const route = useTypedRoute();
-	console.log('currentRoute', currentRoute);
 
 	useEffect(() => {
 		setCurrentRoute(navigationRef.getCurrentRoute()?.name);
@@ -28,6 +27,8 @@ const Navigation: FC = () => {
 			navigationRef.removeListener('state', listener);
 		};
 	}, []);
+
+	useCheckAuth(currentRoute);
 
 	return (
 		<>
