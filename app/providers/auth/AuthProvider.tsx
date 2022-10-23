@@ -6,7 +6,6 @@ import {
 	useEffect,
 	useState
 } from 'react';
-import { Text, View } from 'react-native';
 
 import { IAuthContext, UserState } from './auth-provider.interface';
 

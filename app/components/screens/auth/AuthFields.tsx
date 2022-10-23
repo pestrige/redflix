@@ -5,7 +5,7 @@ import { Text, View } from 'react-native';
 import { Field } from '@app/components/ui';
 
 import { validEmail } from '@app/shared/regex';
-import { AuthFormData } from '@app/shared/types/auth.interface';
+import { AuthFormData } from '@app/shared/types';
 
 interface AuthFieldsProps {
 	control: Control<AuthFormData>;

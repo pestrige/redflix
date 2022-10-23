@@ -1,3 +1,4 @@
+import { Colors } from '@app/config';
 import { useAuth } from '@app/hooks';
 import {
 	NativeStackNavigationOptions,
@@ -14,12 +15,13 @@ const Stack = createNativeStackNavigator<TypeRootStackParamList>();
 const navigationOptions: NativeStackNavigationOptions = {
 	headerShown: false,
 	contentStyle: {
-		backgroundColor: '#090909'
+		backgroundColor: Colors.dark
 	}
 };
 
 const PrivateNavigator: FC = () => {
 	const { user } = useAuth();
+	console.log('user', user);
 	return (
 		<Stack.Navigator screenOptions={navigationOptions}>
 			{user ? (

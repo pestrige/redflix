@@ -4,7 +4,7 @@ import { Pressable, Text, View } from 'react-native';
 
 import { Button, DismissKeyboard, Loader } from '@app/components/ui';
 
-import { AuthFormData } from '@app/shared/types/auth.interface';
+import { AuthFormData } from '@app/shared/types';
 
 import AuthFields from './AuthFields';
 

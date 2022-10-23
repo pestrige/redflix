@@ -18,7 +18,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 			<LinearGradient
 				start={{ x: 0, y: 0.75 }}
 				end={{ x: 1, y: 0.25 }}
-				colors={['#DC3F41', '#a6282b']}
+				colors={['#DC3F41', '#A6282B']}
 				className={cn('w-full py-3 px-8 rounded-2xl items-center', {
 					'flex-row': !!icon
 				})}
