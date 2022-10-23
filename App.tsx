@@ -2,6 +2,8 @@ import Navigation from '@app/navigation/Navigation';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { Toast } from '@app/components/ui';
+
 import AuthProvider from '@app/providers/auth/AuthProvider';
 
 export default function App() {
@@ -13,6 +15,7 @@ export default function App() {
 				</SafeAreaProvider>
 			</AuthProvider>
 			<StatusBar style='light' />
+			<Toast />
 		</>
 	);
 }
