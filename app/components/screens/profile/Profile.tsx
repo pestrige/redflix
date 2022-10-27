@@ -1,7 +1,8 @@
 import { useAuth, useScaleOnMount } from '@app/hooks';
+import { ScreenLayout } from '@app/layout';
 import { AuthService } from '@app/services';
 import { AntDesign } from '@expo/vector-icons';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { Image, Pressable, Text, View } from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -28,7 +29,7 @@ const Profile: FC = () => {
 	};
 
 	return (
-		<View className='mt-20 px-10'>
+		<ScreenLayout>
 			<Heading title='Profile' />
 
 			<Animated.View
@@ -58,7 +59,7 @@ const Profile: FC = () => {
 				<AntDesign name='logout' size={18} color='white' />
 				<Text className='text-white text-lg ml-2'>Logout</Text>
 			</Pressable>
-		</View>
+		</ScreenLayout>
 	);
 };
 

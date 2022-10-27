@@ -1,3 +1,4 @@
+import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
@@ -5,9 +6,9 @@ import { Heading } from '@app/components/ui';
 
 const Search: FC = () => {
 	return (
-		<View className='mt-20 items-center'>
+		<ScreenLayout>
 			<Heading title='Search' />
-		</View>
+		</ScreenLayout>
 	);
 };
 

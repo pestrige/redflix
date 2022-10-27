@@ -1,13 +1,15 @@
+import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+
+import { Heading } from '@app/components/ui';
 
 const NotFoundScreen: FC = () => {
 	// TODO: beautify 404 screen
 
 	return (
-		<View>
-			<Text>Screen not found</Text>
-		</View>
+		<ScreenLayout>
+			<Heading title='Screen not found' />
+		</ScreenLayout>
 	);
 };
 
