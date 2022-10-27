@@ -1,12 +1,9 @@
 import { useAuth } from '@app/hooks';
-import {
-	AuthService,
-	errorCatch,
-	getAccessToken,
-	getNewTokens,
-	getRefreshToken
-} from '@app/services';
+import { AuthService } from '@app/services';
 import { useEffect } from 'react';
+
+import { errorCatch, getNewTokens } from '@app/services/api';
+import { getAccessToken, getRefreshToken } from '@app/services/auth';
 
 export const useCheckAuth = (routeName?: string) => {
 	const { user, setUser } = useAuth();

@@ -1,8 +1,9 @@
 import { API_URL, getAuthUrl } from '@app/config';
-import { getRefreshToken, saveToStorage } from '@app/services';
 import axios from 'axios';
 
 import { AuthResponse } from '@app/shared/types';
+
+import { getRefreshToken, saveToStorage } from '@app/services/auth';
 
 export const getNewTokens = async () => {
 	try {

@@ -1,7 +1,8 @@
 import { getUsersUrl } from '@app/config';
-import { requestApi } from '@app/services';
 
 import { AuthFormData, User } from '@app/shared/types';
+
+import { requestApi } from '@app/services/api/request.api';
 
 export const UserService = {
 	async getAllUsers(searchTerm?: string) {

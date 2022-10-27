@@ -1,4 +1,3 @@
-import { getAccessToken, getUserFromStorage } from '@app/services';
 import * as SplashScreen from 'expo-splash-screen';
 import {
 	FC,
@@ -7,6 +6,8 @@ import {
 	useEffect,
 	useState
 } from 'react';
+
+import { getAccessToken, getUserFromStorage } from '@app/services/auth';
 
 import { IAuthContext, UserState } from './auth-provider.interface';
 

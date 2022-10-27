@@ -1,6 +1,7 @@
 import { API_URL } from '@app/config';
-import { deleteTokensFromStorage, getAccessToken } from '@app/services';
 import axios from 'axios';
+
+import { deleteTokensFromStorage, getAccessToken } from '@app/services/auth';
 
 import { errorCatch } from './error.api';
 import { getNewTokens } from './helpers.api';

@@ -1,12 +1,10 @@
 import { getAuthUrl } from '@app/config';
-import {
-	deleteTokensFromStorage,
-	requestApi,
-	saveToStorage
-} from '@app/services';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { AuthResponse, EnumAsyncStorage } from '@app/shared/types';
+
+import { requestApi } from '@app/services/api/request.api';
+import { deleteTokensFromStorage, saveToStorage } from '@app/services/auth';
 
 export const AuthService = {
 	async main(type: 'reg' | 'login', email: string, password: string) {
