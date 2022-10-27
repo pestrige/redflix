@@ -11,7 +11,8 @@ module.exports = function (api) {
 				}
 			],
 			['nativewind/babel'],
-			['inline-dotenv']
+			['inline-dotenv'],
+			['react-native-reanimated/plugin']
 		]
 	};
 };

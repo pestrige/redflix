@@ -1,9 +1,10 @@
-import { useAuth } from '@app/hooks';
+import { useAuth, useScaleOnMount } from '@app/hooks';
 import { AuthService } from '@app/services';
 import { AntDesign } from '@expo/vector-icons';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Pressable, Text, View } from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
+import Animated from 'react-native-reanimated';
 
 import AuthFields from '@app/components/screens/auth/AuthFields';
 import { useProfile } from '@app/components/screens/profile/useProfile';
@@ -13,6 +14,7 @@ import { AuthFormData } from '@app/shared/types';
 
 const Profile: FC = () => {
 	const { setUser } = useAuth();
+	const { styleAnimation } = useScaleOnMount();
 
 	const { handleSubmit, setValue, control } = useForm<AuthFormData>({
 		mode: 'onChange'
@@ -28,6 +30,16 @@ const Profile: FC = () => {
 	return (
 		<View className='mt-20 px-10'>
 			<Heading title='Profile' />
+
+			<Animated.View
+				style={styleAnimation}
+				className='my-6 items-center justify-center'
+			>
+				<Image
+					source={require('@app/assets/avatar-guest.jpg')}
+					className='w-40 h-40 rounded-2xl'
+				/>
+			</Animated.View>
 
 			{isLoading && <Loader />}
 			{!isLoading && (
