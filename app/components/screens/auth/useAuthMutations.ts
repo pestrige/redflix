@@ -1,11 +1,10 @@
 import { useAuth } from '@app/hooks';
+import { AuthService } from '@app/services';
 import { useMutation } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { UseFormReset } from 'react-hook-form';
 
 import { AuthFormData } from '@app/shared/types';
-
-import { AuthService } from '@app/services/auth/auth.service';
 
 export const useAuthMutations = (reset: UseFormReset<AuthFormData>) => {
 	const { setUser } = useAuth();

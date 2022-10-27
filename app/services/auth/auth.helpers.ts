@@ -15,12 +15,12 @@ export const getAccessToken = async () => {
 };
 
 export const getRefreshToken = async () => {
-	const accessToken = await getItemAsync(EnumSecureStore.REFRESH_TOKEN);
+	const refreshToken = await getItemAsync(EnumSecureStore.REFRESH_TOKEN);
 
-	return accessToken || null;
+	return refreshToken || null;
 };
 
-export const saveTokensToStorage = async (data: Tokens) => {
+const saveTokensToStorage = async (data: Tokens) => {
 	await setItemAsync(EnumSecureStore.ACCESS_TOKEN, data.accessToken);
 	await setItemAsync(EnumSecureStore.REFRESH_TOKEN, data.refreshToken);
 };

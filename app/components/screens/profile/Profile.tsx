@@ -1,10 +1,51 @@
+import { useAuth } from '@app/hooks';
+import { AuthService } from '@app/services';
+import { AntDesign } from '@expo/vector-icons';
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+import { useForm } from 'react-hook-form';
+import { Pressable, Text, View } from 'react-native';
+
+import AuthFields from '@app/components/screens/auth/AuthFields';
+import { useProfile } from '@app/components/screens/profile/useProfile';
+import { Button, Heading, Loader } from '@app/components/ui';
+
+import { AuthFormData } from '@app/shared/types';
 
 const Profile: FC = () => {
+	const { setUser } = useAuth();
+
+	const { handleSubmit, setValue, control } = useForm<AuthFormData>({
+		mode: 'onChange'
+	});
+
+	const { isLoading, onSubmit } = useProfile(setValue);
+
+	const handleLogout = async () => {
+		await AuthService.logout();
+		await setUser(null);
+	};
+
 	return (
-		<View>
-			<Text>Profile</Text>
+		<View className='mt-20 px-10'>
+			<Heading title='Profile' />
+
+			{isLoading && <Loader />}
+			{!isLoading && (
+				<View className='mb-10'>
+					<AuthFields control={control} />
+					<Button onPress={handleSubmit(onSubmit)} icon='edit'>
+						Update Profile
+					</Button>
+				</View>
+			)}
+
+			<Pressable
+				onPress={handleLogout}
+				className='opacity-40 items-center flex-row justify-end'
+			>
+				<AntDesign name='logout' size={18} color='white' />
+				<Text className='text-white text-lg ml-2'>Logout</Text>
+			</Pressable>
 		</View>
 	);
 };

@@ -1,12 +1,12 @@
 import { useAuth } from '@app/hooks';
-import { useEffect } from 'react';
-
-import { getNewTokens } from '@app/services/api/helpers.api';
 import {
+	AuthService,
+	errorCatch,
 	getAccessToken,
+	getNewTokens,
 	getRefreshToken
-} from '@app/services/auth/auth.helpers';
-import { AuthService } from '@app/services/auth/auth.service';
+} from '@app/services';
+import { useEffect } from 'react';
 
 export const useCheckAuth = (routeName?: string) => {
 	const { user, setUser } = useAuth();
@@ -19,7 +19,7 @@ export const useCheckAuth = (routeName?: string) => {
 				try {
 					await getNewTokens();
 				} catch (e) {
-					if (e === 'jwt expired') {
+					if (errorCatch(e) === 'jwt expired') {
 						await AuthService.logout();
 						setUser(null);
 					}

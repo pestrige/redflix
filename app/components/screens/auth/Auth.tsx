@@ -7,6 +7,7 @@ import { Button, DismissKeyboard, Loader } from '@app/components/ui';
 import { AuthFormData } from '@app/shared/types';
 
 import AuthFields from './AuthFields';
+import { useAuthMutations } from './useAuthMutations';
 
 const Auth: FC = () => {
 	const [isRegistration, setIsRegistration] = useState(false);
@@ -15,11 +16,11 @@ const Auth: FC = () => {
 		mode: 'onSubmit'
 	});
 
-	const onSubmit: SubmitHandler<AuthFormData> = (data) => {
-		const { email, password } = data;
-	};
+	const { isLoading, loginSync, registerSync } = useAuthMutations(reset);
 
-	const isLoading = false;
+	const onSubmit: SubmitHandler<AuthFormData> = (data) => {
+		isRegistration ? registerSync(data) : loginSync(data);
+	};
 
 	return (
 		<DismissKeyboard>

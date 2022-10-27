@@ -1,10 +1,6 @@
 import { API_URL } from '@app/config';
+import { deleteTokensFromStorage, getAccessToken } from '@app/services';
 import axios from 'axios';
-
-import {
-	deleteTokensFromStorage,
-	getAccessToken
-} from '@app/services/auth/auth.helpers';
 
 import { errorCatch } from './error.api';
 import { getNewTokens } from './helpers.api';
@@ -31,7 +27,7 @@ api.interceptors.response.use(
 	async (error) => {
 		const originalRequest = error.config;
 		const isNeedToGetNewTokens =
-			(error.response.status === 401 ||
+			(error.response?.status === 401 ||
 				errorCatch(error) === 'jwt expired' ||
 				errorCatch(error) === 'jwt must be provided') &&
 			error.config &&

@@ -21,7 +21,7 @@ const navigationOptions: NativeStackNavigationOptions = {
 
 const PrivateNavigator: FC = () => {
 	const { user } = useAuth();
-	console.log('user', user);
+
 	return (
 		<Stack.Navigator screenOptions={navigationOptions}>
 			{user ? (

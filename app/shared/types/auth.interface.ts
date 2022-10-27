@@ -7,7 +7,7 @@ export interface AuthResponse extends Tokens {
 }
 
 export enum EnumSecureStore {
-	ACCESS_TOKEN = 'accessToken ',
+	ACCESS_TOKEN = 'accessToken',
 	REFRESH_TOKEN = 'refreshToken'
 }
 

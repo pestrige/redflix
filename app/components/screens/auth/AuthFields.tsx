@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Control } from 'react-hook-form';
-import { Text, View } from 'react-native';
 
 import { Field } from '@app/components/ui';
 
