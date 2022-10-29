@@ -1,4 +1,6 @@
+export { default as BlurButton } from './blur-button/BlurButton';
 export { default as Button } from './button/Button';
+export { default as FavoriteButton } from './favorite-button/FavoriteButton';
 export { default as DismissKeyboard } from './field/DismissKeyboard';
 export { default as Heading } from './heading/Heading';
 export { default as Field } from './field/Field';

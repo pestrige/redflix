@@ -1,6 +1,6 @@
 import { getUsersUrl } from '@app/config';
 
-import { AuthFormData, User } from '@app/shared/types';
+import { AuthFormData, Movie, User } from '@app/shared/types';
 
 import { requestApi } from '@app/services/api/request.api';
 
@@ -47,14 +47,20 @@ export const UserService = {
 			method: 'PUT',
 			data
 		});
+	},
+
+	async getFavorites() {
+		return requestApi<Movie[]>({
+			url: getUsersUrl('/profile/favorites'),
+			method: 'GET'
+		});
+	},
+
+	async toggleFavorite(movieId: string) {
+		return requestApi({
+			url: getUsersUrl('/profile/favorites'),
+			method: 'PUT',
+			data: { movieId }
+		});
 	}
-
-	// async getFavorites() {
-	// 	return requestApi<Movie[]>({
-	// 		url: getUsersUrl('/profile/favorite'),
-	// 		method: 'GET'
-	// 	});
-	// },
-
-	// async toggleFavorite() {}
 };

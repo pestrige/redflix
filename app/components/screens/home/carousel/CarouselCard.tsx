@@ -15,7 +15,7 @@ import {
 	ITEM_SIZE,
 	SPACING
 } from '@app/components/screens/home/carousel/carousel.constants';
-import { GenreList, Rating } from '@app/components/ui';
+import { FavoriteButton, GenreList, Rating } from '@app/components/ui';
 
 import { Movie } from '@app/shared/types';
 
@@ -52,6 +52,9 @@ const CarouselCard: FC<CarouselCardProps> = ({ movie, scrollX, index }) => {
 		<View style={{ width: ITEM_SIZE }}>
 			<Animated.View style={wrapperStyle} className='items-center'>
 				<Pressable className='w-full relative' onPress={handleMoviePress}>
+					<View className='absolute z-1 right-2 top-2'>
+						<FavoriteButton movieID={movie._id} />
+					</View>
 					<Image
 						source={getMediaSource(movie.poster)}
 						style={imageStyle}
