@@ -7,3 +7,5 @@ export const Colors = {
 	gray600: '#232323',
 	dark: '#090909'
 };
+
+export const getColor = (color: keyof typeof Colors) => Colors[color];

@@ -7,4 +7,4 @@ export {
 	getUsersUrl
 } from './api.config';
 
-export { Colors } from './colors.config';
+export { Colors, getColor } from './colors.config';
