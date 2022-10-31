@@ -1,6 +1,6 @@
-import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+
+import { ScreenLayout } from '@app/layout';
 
 import { Heading } from '@app/components/ui';
 

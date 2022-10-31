@@ -1,8 +1,9 @@
-import { UserService } from '@app/services';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 
 import { useFavorites } from '@app/components/screens/favorites/useFavorites';
+
+import { UserService } from '@app/services';
 
 export const useFavorite = (movieID: string) => {
 	const [isSmashed, setIsSmashed] = useState(false);

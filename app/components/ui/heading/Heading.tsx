@@ -1,6 +1,6 @@
 import cn from 'clsx';
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 
 import { HeadingProps } from './heading.props';
 

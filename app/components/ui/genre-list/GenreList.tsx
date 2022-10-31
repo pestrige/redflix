@@ -1,6 +1,7 @@
-import { useTypedNavigation } from '@app/hooks';
 import { FC } from 'react';
 import { Pressable, Text, View } from 'react-native';
+
+import { useTypedNavigation } from '@app/hooks';
 
 import { GenreListProps } from './genre-list.props';
 

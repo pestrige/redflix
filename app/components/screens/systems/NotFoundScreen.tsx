@@ -1,5 +1,6 @@
-import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
+
+import { ScreenLayout } from '@app/layout';
 
 import { Heading } from '@app/components/ui';
 

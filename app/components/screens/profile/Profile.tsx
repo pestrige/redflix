@@ -1,17 +1,21 @@
-import { useAuth, useScaleOnMount } from '@app/hooks';
-import { ScreenLayout } from '@app/layout';
-import { AuthService } from '@app/services';
 import { AntDesign } from '@expo/vector-icons';
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { Image, Pressable, Text, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 
+import { ScreenLayout } from '@app/layout';
+
 import AuthFields from '@app/components/screens/auth/AuthFields';
-import { useProfile } from '@app/components/screens/profile/useProfile';
 import { Button, Heading, Loader } from '@app/components/ui';
 
+import { useAuth, useScaleOnMount } from '@app/hooks';
+
 import { AuthFormData } from '@app/shared/types';
+
+import { AuthService } from '@app/services';
+
+import { useProfile } from './useProfile';
 
 const Profile: FC = () => {
 	const { setUser } = useAuth();

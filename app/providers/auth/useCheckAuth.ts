@@ -1,7 +1,8 @@
-import { useAuth } from '@app/hooks';
-import { AuthService } from '@app/services';
 import { useEffect } from 'react';
 
+import { useAuth } from '@app/hooks';
+
+import { AuthService } from '@app/services';
 import { errorCatch, getNewTokens } from '@app/services/api';
 import { getAccessToken, getRefreshToken } from '@app/services/auth';
 

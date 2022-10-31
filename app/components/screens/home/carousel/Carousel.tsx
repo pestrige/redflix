@@ -1,11 +1,5 @@
 import { FC, useRef } from 'react';
-import {
-	Animated,
-	ListRenderItem,
-	ListRenderItemInfo,
-	Platform,
-	View
-} from 'react-native';
+import { Animated, ListRenderItem, Platform, View } from 'react-native';
 
 import { Movie } from '@app/shared/types';
 

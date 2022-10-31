@@ -1,5 +1,3 @@
-import { useTypedNavigation } from '@app/hooks';
-import { getMediaSource } from '@app/utils';
 import { FC } from 'react';
 import {
 	Animated,
@@ -11,14 +9,15 @@ import {
 	View
 } from 'react-native';
 
-import {
-	ITEM_SIZE,
-	SPACING
-} from '@app/components/screens/home/carousel/carousel.constants';
 import { FavoriteButton, GenreList, Rating } from '@app/components/ui';
+
+import { useTypedNavigation } from '@app/hooks';
 
 import { Movie } from '@app/shared/types';
 
+import { getMediaSource } from '@app/utils';
+
+import { ITEM_SIZE, SPACING } from './carousel.constants';
 import { useCardAnimation } from './useCardAnimation';
 
 const imageStyle: StyleProp<ImageStyle> = {

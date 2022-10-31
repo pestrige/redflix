@@ -1,12 +1,21 @@
-import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
 
-import { Heading } from '@app/components/ui';
+import { ScreenLayout } from '@app/layout';
+
+import { Heading, Loader, MoviesCatalog } from '@app/components/ui';
+
+import { useFavorites } from './useFavorites';
 
 const Favorites: FC = () => {
+	const { favoriteMovies, isLoading } = useFavorites();
+
+	if (isLoading) {
+		return <Loader />;
+	}
+
 	return (
 		<ScreenLayout>
-			<Heading title='Favorites' />
+			<MoviesCatalog title='Favorites' movies={favoriteMovies} />
 		</ScreenLayout>
 	);
 };

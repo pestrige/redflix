@@ -1,10 +1,12 @@
-import { useAuth } from '@app/hooks';
-import { BottomMenu } from '@app/layout';
 import {
 	NavigationContainer,
 	useNavigationContainerRef
 } from '@react-navigation/native';
 import { FC, useEffect, useState } from 'react';
+
+import { BottomMenu } from '@app/layout';
+
+import { useAuth } from '@app/hooks';
 
 import { useCheckAuth } from '@app/providers/auth/useCheckAuth';
 

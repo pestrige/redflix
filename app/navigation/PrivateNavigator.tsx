@@ -1,5 +1,3 @@
-import { Colors } from '@app/config';
-import { useAuth } from '@app/hooks';
 import {
 	NativeStackNavigationOptions,
 	createNativeStackNavigator
@@ -7,6 +5,10 @@ import {
 import { FC } from 'react';
 
 import { Auth, NotFoundScreen } from '@app/components/screens';
+
+import { useAuth } from '@app/hooks';
+
+import { Colors } from '@app/config';
 
 import { TypeRootStackParamList } from './navigation.types';
 import { routes } from './user.routes';

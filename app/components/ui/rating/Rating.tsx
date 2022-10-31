@@ -1,8 +1,9 @@
-import { getColor } from '@app/config';
 import { AntDesign } from '@expo/vector-icons';
 import cn from 'clsx';
 import { FC } from 'react';
 import { Text, View } from 'react-native';
+
+import { getColor } from '@app/config';
 
 import { RatingProps } from './rating.props';
 

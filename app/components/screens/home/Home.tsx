@@ -1,11 +1,13 @@
-import { useTypedNavigation } from '@app/hooks';
-import { ScreenLayout } from '@app/layout';
 import { FC } from 'react';
 
-import { useGetAllMovies } from '@app/components/screens/home/useGetAllMovies';
+import { ScreenLayout } from '@app/layout';
+
 import { Loader } from '@app/components/ui';
 
+import { useTypedNavigation } from '@app/hooks';
+
 import Carousel from './carousel/Carousel';
+import { useGetAllMovies } from './useGetAllMovies';
 
 const Home: FC = () => {
 	const { navigate } = useTypedNavigation();
