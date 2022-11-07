@@ -1,8 +1,8 @@
-import { getMoviesUrl } from '@app/config';
-
-import { AuthFormData, Movie, MovieEditInput } from '@app/shared/types';
+import { Movie, MovieEditInput } from '@app/shared/types';
 
 import { requestApi } from '@app/services/api/request.api';
+
+import { getMoviesUrl } from '@app/config';
 
 export const MovieService = {
 	async getAllMovies(searchTerm?: string) {
@@ -34,11 +34,11 @@ export const MovieService = {
 		});
 	},
 
-	async getMovieByGenres(genresIds: string) {
+	async getMovieByGenres(genreIds: string[]) {
 		return requestApi<Movie[]>({
 			url: getMoviesUrl('/by-genres/'),
 			method: 'POST',
-			data: { genresIds }
+			data: { genreIds }
 		});
 	},
 

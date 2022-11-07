@@ -8,10 +8,11 @@ import { BlurButtonProps } from './blur-button.props';
 
 const BlurButton: FC<PropsWithChildren<BlurButtonProps>> = ({
 	children,
-	className,
 	color = '#fffff',
 	icon,
 	size = 21,
+	style,
+	isSmall = false,
 	...rest
 }) => {
 	return (
@@ -20,9 +21,10 @@ const BlurButton: FC<PropsWithChildren<BlurButtonProps>> = ({
 				intensity={22}
 				tint='light'
 				className={cn(
-					className,
-					'w-12 h-12 items-center justify-center rounded-2xl overflow-hidden'
+					' items-center justify-center overflow-hidden',
+					isSmall ? 'w-8 h-8 rounded-lg' : 'w-12 h-12 rounded-2xl'
 				)}
+				style={style}
 			>
 				{children ?? <Feather name={icon} size={size} color={color} />}
 			</BlurView>

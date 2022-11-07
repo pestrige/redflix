@@ -1,6 +1,6 @@
 import {
-	Auth,
 	Favorites,
+	Genre,
 	Home,
 	Profile,
 	Search,
@@ -15,7 +15,8 @@ export const userRoutes: Route[] = [
 	{ name: 'Trending', component: Trending },
 	{ name: 'Search', component: Search },
 	{ name: 'Favorites', component: Favorites },
-	{ name: 'Profile', component: Profile }
+	{ name: 'Profile', component: Profile },
+	{ name: 'Genre', component: Genre }
 ];
 
 export const routes = [...userRoutes, ...adminRoutes];

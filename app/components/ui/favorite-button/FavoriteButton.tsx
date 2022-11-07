@@ -1,5 +1,4 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import cn from 'clsx';
 import { FC } from 'react';
 import { StyleSheet } from 'react-native';
 import Animated, { withSpring } from 'react-native-reanimated';
@@ -10,7 +9,10 @@ import { FavoriteButtonProps } from './favorite-button.props';
 import { useFavorite } from './useFavorite';
 import { useFavoriteAnimation } from './useFavoriteAnimation';
 
-const FavoriteButton: FC<FavoriteButtonProps> = ({ isSmall, movieID }) => {
+const FavoriteButton: FC<FavoriteButtonProps> = ({
+	isSmall = false,
+	movieID
+}) => {
 	const { isSmashed, toggleFavorite } = useFavorite(movieID);
 	const { liked, outlineStyle, fillStyle } = useFavoriteAnimation(isSmashed);
 
@@ -20,10 +22,7 @@ const FavoriteButton: FC<FavoriteButtonProps> = ({ isSmall, movieID }) => {
 	};
 
 	return (
-		<BlurButton
-			className={cn({ isSmall: 'w-8 h-8 rounded-lg' })}
-			onPress={handlePress}
-		>
+		<BlurButton isSmall={isSmall} onPress={handlePress}>
 			<Animated.View
 				style={[StyleSheet.absoluteFill, outlineStyle]}
 				className='items-center justify-center'

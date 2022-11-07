@@ -40,12 +40,9 @@ const MoviesCatalog: FC<MoviesCatalogProps> = ({
 				<View className='flex-row flex-wrap justify-between mt-5 mb-32'>
 					{isMovies &&
 						movies.map((movie, index) => (
-							<MovieCard
-								movie={movie}
-								index={index}
-								key={movie._id}
-								className='mb-6'
-							/>
+							<View className='mb-6' key={movie._id}>
+								<MovieCard movie={movie} index={index} style={{ width: 160 }} />
+							</View>
 						))}
 					{!isMovies && (
 						<Text className='text-white text-lg'>Elements not found</Text>

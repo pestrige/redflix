@@ -8,4 +8,9 @@ export {
 export { TypeFeatherIconType, TypeMaterialIconType } from './icon.types';
 export { TypeNavigate } from './common.types';
 export { User } from './user.interface';
-export { Movie, MovieEditInput, Genre } from './movie.interface';
+export {
+	Movie,
+	MovieEditInput,
+	Genre,
+	GenreEditInput
+} from './movie.interface';

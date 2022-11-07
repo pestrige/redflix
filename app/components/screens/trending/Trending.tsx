@@ -2,12 +2,24 @@ import { FC } from 'react';
 
 import { ScreenLayout } from '@app/layout';
 
-import { Heading } from '@app/components/ui';
+import { Loader, MoviesCatalog } from '@app/components/ui';
+
+import { useTrending } from './useTrending';
 
 const Trending: FC = () => {
+	const { isLoading, movies } = useTrending();
+
+	if (isLoading) {
+		return <Loader />;
+	}
+
 	return (
 		<ScreenLayout>
-			<Heading title='Trending' />
+			<MoviesCatalog
+				title='Trending'
+				movies={movies}
+				description='Trending movies in excellent quality: legal, safe, without ads'
+			/>
 		</ScreenLayout>
 	);
 };

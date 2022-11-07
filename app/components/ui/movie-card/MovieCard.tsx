@@ -1,4 +1,3 @@
-import cn from 'clsx';
 import { BlurView } from 'expo-blur';
 import { FC } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
@@ -16,10 +15,10 @@ import { useMovieCardAnimation } from './useMovieCardAnimation';
 
 const ReanimatedPressable = Animated.createAnimatedComponent(Pressable);
 
-const MovieCard: FC<MovieCardProps> = ({ index, movie, className }) => {
+const MovieCard: FC<MovieCardProps> = ({ index, movie, style }) => {
 	const { navigate } = useTypedNavigation();
 	const { name } = useTypedRoute();
-	const { animatedStyle } = useMovieCardAnimation(index);
+	const { animatedStyle } = useMovieCardAnimation(index, style);
 	const { _id, poster, slug, rating, title } = movie;
 	const isFavoritePage = name === 'Favorites';
 
@@ -31,7 +30,7 @@ const MovieCard: FC<MovieCardProps> = ({ index, movie, className }) => {
 		<ReanimatedPressable
 			style={animatedStyle}
 			onPress={handlePress}
-			className={cn(className, 'rounded-xl overflow-hidden h-56 w-40')}
+			className='rounded-xl overflow-hidden h-56'
 		>
 			{isFavoritePage && (
 				<View className='absolute z-1 right-1.5 top-1.5'>

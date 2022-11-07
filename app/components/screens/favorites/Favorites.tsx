@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { ScreenLayout } from '@app/layout';
 
-import { Heading, Loader, MoviesCatalog } from '@app/components/ui';
+import { Loader, MoviesCatalog } from '@app/components/ui';
 
 import { useFavorites } from './useFavorites';
 
