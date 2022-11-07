@@ -4,7 +4,8 @@ import { FC } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { FavoriteButton, Rating } from '@app/components/ui';
+import FavoriteButton from '@app/components/ui/favorite-button/FavoriteButton';
+import Rating from '@app/components/ui/rating/Rating';
 
 import { useTypedNavigation, useTypedRoute } from '@app/hooks';
 

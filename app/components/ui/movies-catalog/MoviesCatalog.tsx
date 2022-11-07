@@ -2,7 +2,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { FC } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 
-import { Description, Heading, MovieCard } from '@app/components/ui';
+import Description from '@app/components/ui/description/Description';
+import Heading from '@app/components/ui/heading/Heading';
+import MovieCard from '@app/components/ui/movie-card/MovieCard';
 
 import { useTypedNavigation } from '@app/hooks';
 
