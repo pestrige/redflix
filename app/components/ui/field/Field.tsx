@@ -4,7 +4,7 @@ import { Text, TextInput, View } from 'react-native';
 
 import { FieldProps } from './field.props';
 
-const Field = <T extends Record<string, unknown>>({
+const Field = <T extends Record<string, any>>({
 	control,
 	name,
 	rules,
