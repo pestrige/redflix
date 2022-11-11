@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
+import { Animated } from 'react-native';
 
 import { ScreenLayout } from '@app/layout';
 
@@ -11,6 +12,7 @@ import MovieHeader from './MovieHeader';
 import { useMovie } from './useMovie';
 
 const Movie: FC = () => {
+	const y = useRef(new Animated.Value(0)).current;
 	const { isLoading, movie } = useMovie();
 
 	if (isLoading) {
@@ -22,9 +24,9 @@ const Movie: FC = () => {
 
 	return (
 		<ScreenLayout style={{ paddingTop: 0 }} hasPadding={false}>
-			<MovieHeader movie={movie} />
-			<MovieBackground movie={movie} />
-			<MovieContent movie={movie} />
+			<MovieHeader movie={movie} y={y} />
+			<MovieBackground movie={movie} y={y} />
+			<MovieContent movie={movie} y={y} />
 		</ScreenLayout>
 	);
 };

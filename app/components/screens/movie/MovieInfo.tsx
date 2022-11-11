@@ -3,13 +3,18 @@ import { Animated, StyleSheet, Text, View } from 'react-native';
 
 import { DotIcon, GenreList, Rating } from '@app/components/ui';
 
+import { HEADER_HEIGHT } from './movie.constant';
 import { MovieCommonProps } from './movie.interface';
 
-const MovieInfo: FC<MovieCommonProps> = ({ movie }) => {
+const MovieInfo: FC<MovieCommonProps> = ({ movie, y }) => {
 	const { title, rating, parameters, genres } = movie;
+	const opacity = y.interpolate({
+		inputRange: [-HEADER_HEIGHT, 0, HEADER_HEIGHT / 2],
+		outputRange: [1, 1, 0]
+	});
 
 	return (
-		<Animated.View className='px-6 mb-3 '>
+		<Animated.View className='px-6 mb-3' style={{ opacity }}>
 			<Text
 				className='text-5xl font-semibold mb-2 pr-2 text-[#F9FCFC]'
 				numberOfLines={2}

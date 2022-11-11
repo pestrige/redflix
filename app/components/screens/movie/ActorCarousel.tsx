@@ -48,7 +48,7 @@ const ActorCarousel: FC<{ actors: Actor[] }> = ({ actors }) => {
 };
 
 const styles = StyleSheet.create({
-	button: { height: 72, backgroundColor: 'rgba(255, 255, 255, 0.7)' },
+	button: { height: 72, backgroundColor: 'rgba(255, 255, 255, 0.07)' },
 	image: { width: 50, resizeMode: 'cover' }
 });
 
