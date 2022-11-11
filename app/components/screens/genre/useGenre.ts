@@ -14,7 +14,6 @@ export const useGenre = () => {
 	);
 
 	const genreID = genre?._id ?? '';
-	console.log('genreID', genreID);
 	const { isLoading: isMoviesLoading, data: movies } = useQuery(
 		['get-movies-by-genre', genreID],
 		() => MovieService.getMovieByGenres([genreID]),

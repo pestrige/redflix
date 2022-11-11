@@ -1,6 +1,7 @@
 import { ComponentType } from 'react';
 
 export type TypeRootStackParamList = {
+	Actor: { slug: string };
 	Auth: undefined;
 	Favorites: undefined;
 	Genre: { slug: string };

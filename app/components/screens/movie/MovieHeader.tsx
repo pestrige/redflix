@@ -6,13 +6,9 @@ import { BlurButton, FavoriteButton, Rating } from '@app/components/ui';
 
 import { useTypedNavigation } from '@app/hooks';
 
-import { Movie } from '@app/shared/types';
+import { MovieCommonProps } from './movie.interface';
 
-interface MovieHeaderProps {
-	movie: Movie;
-}
-
-const MovieHeader: FC<MovieHeaderProps> = ({ movie }) => {
+const MovieHeader: FC<MovieCommonProps> = ({ movie }) => {
 	const { goBack } = useTypedNavigation();
 	const { top } = useSafeAreaInsets();
 	const { title, rating, _id } = movie;

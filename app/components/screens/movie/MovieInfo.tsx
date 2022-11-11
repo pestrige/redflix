@@ -3,13 +3,9 @@ import { Animated, StyleSheet, Text, View } from 'react-native';
 
 import { DotIcon, GenreList, Rating } from '@app/components/ui';
 
-import { Movie } from '@app/shared/types';
+import { MovieCommonProps } from './movie.interface';
 
-interface MovieInfoProps {
-	movie: Movie;
-}
-
-const MovieInfo: FC<MovieInfoProps> = ({ movie }) => {
+const MovieInfo: FC<MovieCommonProps> = ({ movie }) => {
 	const { title, rating, parameters, genres } = movie;
 
 	return (

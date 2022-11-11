@@ -2,12 +2,12 @@ import { FC } from 'react';
 
 import { ScreenLayout } from '@app/layout';
 
-import { NotFoundScreen } from '@app/components/screens';
+import NotFoundScreen from '@app/components/screens/systems/NotFoundScreen';
 import { Loader } from '@app/components/ui';
 
 import MovieBackground from './MovieBackground';
+import MovieContent from './MovieContent';
 import MovieHeader from './MovieHeader';
-import MovieInfo from './MovieInfo';
 import { useMovie } from './useMovie';
 
 const Movie: FC = () => {
@@ -24,7 +24,7 @@ const Movie: FC = () => {
 		<ScreenLayout style={{ paddingTop: 0 }} hasPadding={false}>
 			<MovieHeader movie={movie} />
 			<MovieBackground movie={movie} />
-			<MovieInfo movie={movie} />
+			<MovieContent movie={movie} />
 		</ScreenLayout>
 	);
 };

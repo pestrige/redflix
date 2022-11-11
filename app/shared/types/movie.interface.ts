@@ -4,13 +4,15 @@ interface MovieParameters {
 	country: string;
 }
 
-interface Actor {
+export interface Actor {
 	_id: string;
 	photo: string;
 	name: string;
 	countMovies: number;
 	slug: string;
 }
+
+export interface ActorEditInput extends Omit<Actor, '_id'> {}
 
 export interface Genre {
 	_id: string;

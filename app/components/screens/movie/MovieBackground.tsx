@@ -3,15 +3,11 @@ import { FC } from 'react';
 import { Animated, Image, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Movie } from '@app/shared/types';
-
 import { getMediaSource } from '@app/utils';
 
-interface MovieBackgroundProps {
-	movie: Movie;
-}
+import { MovieCommonProps } from './movie.interface';
 
-const MovieBackground: FC<MovieBackgroundProps> = ({ movie }) => {
+const MovieBackground: FC<MovieCommonProps> = ({ movie }) => {
 	const { top } = useSafeAreaInsets();
 	const { poster } = movie;
 
