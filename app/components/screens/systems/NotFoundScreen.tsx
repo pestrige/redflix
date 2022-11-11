@@ -4,12 +4,18 @@ import { ScreenLayout } from '@app/layout';
 
 import { Heading } from '@app/components/ui';
 
-const NotFoundScreen: FC = () => {
+interface NotFoundScreenProps {
+	title?: string;
+}
+
+const NotFoundScreen: FC<NotFoundScreenProps> = ({
+	title = 'Screen not found'
+}) => {
 	// TODO: beautify 404 screen
 
 	return (
 		<ScreenLayout>
-			<Heading title='Screen not found' />
+			<Heading title={title} />
 		</ScreenLayout>
 	);
 };

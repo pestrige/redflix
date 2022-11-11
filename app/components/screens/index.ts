@@ -3,6 +3,7 @@ export { default as Auth } from './auth/Auth';
 export { default as Favorites } from './favorites/Favorites';
 export { default as Genre } from './genre/Genre';
 export { default as Home } from './home/Home';
+export { default as Movie } from './movie/Movie';
 export { default as NotFoundScreen } from './systems/NotFoundScreen';
 export { default as Profile } from './profile/Profile';
 export { default as Search } from './search/Search';

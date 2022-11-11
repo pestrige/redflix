@@ -3,13 +3,13 @@ import { ComponentType } from 'react';
 export type TypeRootStackParamList = {
 	Auth: undefined;
 	Favorites: undefined;
+	Genre: { slug: string };
 	Home: undefined;
+	Movie: { slug: string };
 	NotFound: undefined;
 	Profile: undefined;
 	Search: undefined;
 	Trending: undefined;
-	Movie: { slug: string };
-	Genre: { slug: string };
 } & TypeRootStackAdminList;
 
 type TypeRootStackAdminList = {

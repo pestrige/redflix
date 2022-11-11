@@ -1,6 +1,7 @@
 export { default as BlurButton } from './blur-button/BlurButton';
 export { default as Button } from './button/Button';
 export { default as DismissKeyboard } from './field/DismissKeyboard';
+export { default as DotIcon } from './dot-icon/DotIcon';
 export { default as FavoriteButton } from './favorite-button/FavoriteButton';
 export { default as Heading } from './heading/Heading';
 export { default as MovieCard } from './movie-card/MovieCard';

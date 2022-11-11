@@ -2,6 +2,7 @@ import {
 	Favorites,
 	Genre,
 	Home,
+	Movie,
 	Profile,
 	Search,
 	Trending
@@ -11,12 +12,13 @@ import { adminRoutes } from './admin.routes';
 import { Route } from './navigation.types';
 
 export const userRoutes: Route[] = [
-	{ name: 'Home', component: Home },
-	{ name: 'Trending', component: Trending },
-	{ name: 'Search', component: Search },
 	{ name: 'Favorites', component: Favorites },
+	{ name: 'Genre', component: Genre },
+	{ name: 'Home', component: Home },
+	{ name: 'Movie', component: Movie },
 	{ name: 'Profile', component: Profile },
-	{ name: 'Genre', component: Genre }
+	{ name: 'Search', component: Search },
+	{ name: 'Trending', component: Trending }
 ];
 
 export const routes = [...userRoutes, ...adminRoutes];
