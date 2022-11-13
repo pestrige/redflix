@@ -1,7 +1,7 @@
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 
 export interface ScreenLayoutProps {
 	className?: string;
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 	hasPadding?: boolean;
 }

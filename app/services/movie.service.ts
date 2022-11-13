@@ -73,7 +73,7 @@ export const MovieService = {
 
 	async updateViewsCount(slug: string) {
 		return requestApi<string>({
-			url: getMoviesUrl('update-count-opened'),
+			url: getMoviesUrl('/update-count-opened'),
 			method: 'PUT',
 			data: { slug }
 		});

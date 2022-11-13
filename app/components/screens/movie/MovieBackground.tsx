@@ -30,7 +30,7 @@ const MovieBackground: FC<MovieCommonProps> = ({ movie, y }) => {
 				...StyleSheet.absoluteFillObject,
 				height: HEADER_HEIGHT * 1.76,
 				marginTop: -top,
-				opacity,
+				// opacity, // TODO: uncomment if need to hide background
 				transform: [{ scale }, { translateY }]
 			}}
 		>

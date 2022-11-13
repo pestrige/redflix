@@ -14,7 +14,7 @@ const MovieInfo: FC<MovieCommonProps> = ({ movie, y }) => {
 	});
 
 	return (
-		<Animated.View className='px-6 mb-3' style={{ opacity }}>
+		<Animated.View className='px-6 mb-6' style={{ opacity }}>
 			<Text
 				className='text-5xl font-semibold mb-2 pr-2 text-[#F9FCFC]'
 				numberOfLines={2}

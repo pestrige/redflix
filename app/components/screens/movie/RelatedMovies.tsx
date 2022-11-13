@@ -26,7 +26,7 @@ const RelatedMovies: FC<RelatedMoviesProps> = ({
 	}
 
 	return (
-		<View className='my-8'>
+		<View className='my-10'>
 			<Text className='text-white text-2xl font-semibold mb-5'>
 				Related movies
 			</Text>

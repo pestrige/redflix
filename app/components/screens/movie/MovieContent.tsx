@@ -26,7 +26,7 @@ const MovieContent: FC<MovieCommonProps> = ({ movie, y }) => {
 		>
 			<MovieInfo movie={movie} y={y} />
 
-			<View className='bg-[#090909] px-6 pt-1 pb-24'>
+			<View className='bg-[#090909] px-6 pt-1 pb-32'>
 				<VideoPlayer video={movie.videoUrl} />
 				<ActorCarousel actors={movie.actors} />
 				<RelatedMovies currentMovieId={movie._id} genreIds={genresIds} />

@@ -1,6 +1,7 @@
 import cn from 'clsx';
 import { FC, PropsWithChildren } from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
+import { Platform, SafeAreaView, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ScreenLayoutProps } from './screen-layout.props';
 
@@ -10,11 +11,14 @@ const ScreenLayout: FC<PropsWithChildren<ScreenLayoutProps>> = ({
 	style,
 	hasPadding = true
 }) => {
+	const { top } = useSafeAreaInsets();
+	const paddingTop = Platform.OS === 'ios' ? top / 6 : top * 2;
+
 	return (
 		<SafeAreaView className='flex-1'>
 			<View
-				className={cn('pt-5 flex-1', className, { 'px-6': hasPadding })}
-				style={style}
+				className={cn('flex-1', className, { 'px-6': hasPadding })}
+				style={{ paddingTop, ...style }}
 			>
 				{children}
 			</View>
