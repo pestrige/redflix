@@ -1,5 +1,4 @@
 export { default as Actor } from './actor/Actor';
-export { default as AdminHome } from './admin/home/Admin';
 export { default as Auth } from './auth/Auth';
 export { default as Favorites } from './favorites/Favorites';
 export { default as Genre } from './genre/Genre';
@@ -9,3 +8,13 @@ export { default as NotFoundScreen } from './systems/NotFoundScreen';
 export { default as Profile } from './profile/Profile';
 export { default as Search } from './search/Search';
 export { default as Trending } from './trending/Trending';
+
+export { default as AdminHome } from './admin/home/Admin';
+export { default as ActorEdit } from './admin/actor-edit/ActorEdit';
+export { default as ActorsList } from './admin/actors-list/ActorsList';
+export { default as GenreEdit } from './admin/genre-edit/GenreEdit';
+export { default as GenresList } from './admin/genres-list/GenresList';
+export { default as MovieEdit } from './admin/movie-edit/MovieEdit';
+export { default as MoviesList } from './admin/movies-list/MoviesList';
+export { default as UserEdit } from './admin/user-edit/UserEdit';
+export { default as UsersList } from './admin/users-list/UsersList';

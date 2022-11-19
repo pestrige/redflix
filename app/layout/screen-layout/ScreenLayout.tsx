@@ -1,8 +1,9 @@
 import cn from 'clsx';
 import { FC, PropsWithChildren } from 'react';
-import { Platform, SafeAreaView, Text, View } from 'react-native';
+import { Platform, SafeAreaView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import AdminButton from './AdminButton';
 import { ScreenLayoutProps } from './screen-layout.props';
 
 const ScreenLayout: FC<PropsWithChildren<ScreenLayoutProps>> = ({
@@ -22,6 +23,7 @@ const ScreenLayout: FC<PropsWithChildren<ScreenLayoutProps>> = ({
 			>
 				{children}
 			</View>
+			<AdminButton />
 		</SafeAreaView>
 	);
 };

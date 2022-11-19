@@ -15,6 +15,14 @@ export type TypeRootStackParamList = {
 
 type TypeRootStackAdminList = {
 	Admin: undefined;
+	ActorEdit: { id: string };
+	ActorsList: undefined;
+	GenreEdit: { id: string };
+	GenresList: undefined;
+	MovieEdit: { id: string };
+	MoviesList: undefined;
+	UserEdit: { id: string };
+	UsersList: undefined;
 };
 
 export interface Route {
