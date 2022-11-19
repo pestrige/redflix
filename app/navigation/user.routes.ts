@@ -1,4 +1,5 @@
 import {
+	Actor,
 	Favorites,
 	Genre,
 	Home,
@@ -12,6 +13,7 @@ import { adminRoutes } from './admin.routes';
 import { Route } from './navigation.types';
 
 export const userRoutes: Route[] = [
+	{ name: 'Actor', component: Actor },
 	{ name: 'Favorites', component: Favorites },
 	{ name: 'Genre', component: Genre },
 	{ name: 'Home', component: Home },

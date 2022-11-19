@@ -1,3 +1,4 @@
+export { default as Actor } from './actor/Actor';
 export { default as AdminHome } from './admin/home/Admin';
 export { default as Auth } from './auth/Auth';
 export { default as Favorites } from './favorites/Favorites';

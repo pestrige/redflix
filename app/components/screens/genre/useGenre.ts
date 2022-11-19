@@ -2,8 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { useTypedRoute } from '@app/hooks';
 
-import { MovieService } from '@app/services';
-import { GenreService } from '@app/services/genre.service';
+import { GenreService, MovieService } from '@app/services';
 
 export const useGenre = () => {
 	const { params } = useTypedRoute<'Genre'>();
