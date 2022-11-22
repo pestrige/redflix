@@ -1,17 +1,18 @@
 import { useQuery } from '@tanstack/react-query';
+import { useEffect } from 'react';
 
-import { useTypedRoute } from '@app/hooks';
+import { useTypedNavigation, useTypedRoute } from '@app/hooks';
 
 import { ActorService, MovieService } from '@app/services';
 
 export const useActor = () => {
 	const { params } = useTypedRoute<'Actor'>();
+	const { navigate } = useTypedNavigation();
 
 	const { isLoading, data: actor } = useQuery(
 		['get-actor-by-slug', params?.slug],
-		() => {
-			return ActorService.getActorBySlug(params?.slug);
-		}
+		() => ActorService.getActorBySlug(params?.slug),
+		{ enabled: !!params?.slug }
 	);
 
 	const actorID = actor?._id ?? '';
@@ -21,6 +22,12 @@ export const useActor = () => {
 		() => MovieService.getMovieByActor(actorID),
 		{ enabled: !!actorID }
 	);
+
+	useEffect(() => {
+		if (params?.slug === undefined) {
+			navigate('Home');
+		}
+	}, []);
 
 	return { actor, movies, isLoading: isLoadingMovies || isLoading };
 };

@@ -14,14 +14,17 @@ export type TypeRootStackParamList = {
 } & TypeRootStackAdminList;
 
 type TypeRootStackAdminList = {
-	Admin: undefined;
 	ActorEdit: { id: string };
-	ActorsList: undefined;
 	GenreEdit: { id: string };
-	GenresList: undefined;
 	MovieEdit: { id: string };
-	MoviesList: undefined;
 	UserEdit: { id: string };
+} & TypeRootStackAdminMenuList;
+
+export type TypeRootStackAdminMenuList = {
+	Admin: undefined;
+	ActorsList: undefined;
+	GenresList: undefined;
+	MoviesList: undefined;
 	UsersList: undefined;
 };
 

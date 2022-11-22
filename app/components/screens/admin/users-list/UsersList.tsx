@@ -1,11 +1,13 @@
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+
+import { AdminLayout } from '@app/layout';
 
 const UsersList: FC = () => {
 	return (
-		<View>
-			<Text>UsersList</Text>
-		</View>
+		<AdminLayout title='Users List'>
+			<Text>Users List</Text>
+		</AdminLayout>
 	);
 };
 

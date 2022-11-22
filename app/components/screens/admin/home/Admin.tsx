@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
+import { AdminLayout } from '@app/layout';
+
 const Admin: FC = () => {
 	return (
-		<View>
+		<AdminLayout title='Statistic'>
 			<Text>Admin</Text>
-		</View>
+		</AdminLayout>
 	);
 };
 

@@ -3,6 +3,7 @@ export { default as Button } from './button/Button';
 export { default as DismissKeyboard } from './field/DismissKeyboard';
 export { default as DotIcon } from './dot-icon/DotIcon';
 export { default as FavoriteButton } from './favorite-button/FavoriteButton';
+export { default as Hamburger } from './hamburger/Hamburger';
 export { default as Heading } from './heading/Heading';
 export { default as HorizontalList } from './HorizontalList';
 export { default as MovieCard } from './movie-card/MovieCard';

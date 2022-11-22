@@ -17,7 +17,7 @@ const Actor: FC = () => {
 		<ScreenLayout>
 			{!actor?._id && <NotFound />}
 
-			{actor?._id && <MoviesCatalog title={actor.name} movies={movies} />}
+			{!!actor?._id && <MoviesCatalog title={actor.name} movies={movies} />}
 		</ScreenLayout>
 	);
 };
