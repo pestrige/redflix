@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
 import { View } from 'react-native';
 
-import Loader from '@app/components/ui/Loader';
+import Loader from '@app/components/ui/loader/Loader';
 
 interface BlockProps {
 	className?: string;
