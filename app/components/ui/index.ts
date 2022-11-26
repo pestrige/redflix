@@ -1,3 +1,4 @@
+export { default as Block } from './block/Block';
 export { default as BlurButton } from './blur-button/BlurButton';
 export { default as Button } from './button/Button';
 export { default as DismissKeyboard } from './field/DismissKeyboard';

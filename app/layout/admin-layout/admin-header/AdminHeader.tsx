@@ -1,4 +1,3 @@
-import { useIsFocused } from '@react-navigation/native';
 import { BlurView } from 'expo-blur';
 import { FC, useState } from 'react';
 import { View } from 'react-native';

@@ -4,7 +4,7 @@ import { ScreenLayout } from '@app/layout';
 
 import { Loader, MoviesCatalog } from '@app/components/ui';
 
-import { useTrending } from './useTrending';
+import { useTrending } from '@app/hooks';
 
 const Trending: FC = () => {
 	const { isLoading, movies } = useTrending();

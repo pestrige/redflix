@@ -1,3 +1,4 @@
+import { useIsFocused } from '@react-navigation/native';
 import { useEffect } from 'react';
 import {
 	useAnimatedStyle,
@@ -10,14 +11,11 @@ export const useScaleOnMount = () => {
 	const styleAnimation = useAnimatedStyle(() => ({
 		transform: [{ scale: scale.value }]
 	}));
+	const isFocused = useIsFocused();
 
 	useEffect(() => {
-		scale.value = withSpring(1);
-
-		return () => {
-			scale.value = withSpring(0);
-		};
-	}, []);
+		scale.value = withSpring(isFocused ? 1 : 0);
+	}, [isFocused]);
 
 	return { styleAnimation };
 };

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Animated from 'react-native-reanimated';
 
-import { BlurButton } from '@app/components/ui';
-import { HamburgerProps } from '@app/components/ui/hamburger/hamburger.props';
+import BlurButton from '@app/components/ui/blur-button/BlurButton';
 
+import { HamburgerProps } from './hamburger.props';
 import { useHamburgerAnimation } from './useHamburgerAnimation';
 
 const lineClassName = 'w-6 h-0.5 bg-[#ecf0f1]';
