@@ -5,7 +5,8 @@ import { ScreenLayout } from '@app/layout';
 
 import { Field, Heading, Loader, MoviesCatalog } from '@app/components/ui';
 
-import { SearchFormData } from './search.interface';
+import { SearchFormData } from '@app/shared/types';
+
 import { useSearch } from './useSearch';
 
 const Search: FC = () => {

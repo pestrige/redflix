@@ -1,8 +1,8 @@
-import { getUsersUrl } from '@app/config';
-
 import { AuthFormData, Movie, User } from '@app/shared/types';
 
 import { requestApi } from '@app/services/api/request.api';
+
+import { getUsersUrl } from '@app/config';
 
 export const UserService = {
 	async getAllUsers(searchTerm?: string) {
@@ -29,7 +29,7 @@ export const UserService = {
 
 	async deleteUser(userID: string) {
 		return requestApi<string>({
-			url: getUsersUrl(`${userID}`),
+			url: getUsersUrl(`/${userID}`),
 			method: 'DELETE'
 		});
 	},
