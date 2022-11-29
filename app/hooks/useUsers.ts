@@ -6,17 +6,11 @@ import Toast from 'react-native-toast-message';
 import { useSearchForm } from '@app/hooks/useSearchForm';
 import { useTypedNavigation } from '@app/hooks/useTypedNavigation';
 
-import { TableItem, User } from '@app/shared/types';
+import { NavigateType, TableItem, User } from '@app/shared/types';
 
 import { UserService } from '@app/services';
 
-const formatUsers = (
-	users: User[],
-	navigate: (
-		route: keyof TypeRootStackParamList,
-		params: Record<string, unknown>
-	) => void
-): TableItem[] =>
+const formatUsers = (users: User[], navigate: NavigateType): TableItem[] =>
 	users.map((user) => ({
 		_id: user._id,
 		editNavigate: () => navigate('UserEdit', { id: user._id }),
@@ -36,7 +30,7 @@ export const useUsers = () => {
 	);
 
 	const { mutateAsync: deleteUserAsync } = useMutation(
-		['delete user'],
+		['delete-user'],
 		(userID: string) => UserService.deleteUser(userID),
 		{
 			onSuccess: async () => {

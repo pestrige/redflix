@@ -1,11 +1,27 @@
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+
+import { AdminLayout } from '@app/layout';
+
+import { Table, TableHeader } from '@app/components/ui';
+
+import { useActorsList } from './useActorsList';
+
+const headerItems = ['Name', 'Movies count'];
 
 const ActorsList: FC = () => {
+	const { control, isLoading, data, deleteActorAsync, createActorAsync } =
+		useActorsList();
+
 	return (
-		<View>
-			<Text>ActorsList</Text>
-		</View>
+		<AdminLayout title='Actors List'>
+			<TableHeader control={control} onPress={createActorAsync} />
+			<Table
+				isLoading={isLoading}
+				headerItems={headerItems}
+				removeHandler={deleteActorAsync}
+				tableItems={data}
+			/>
+		</AdminLayout>
 	);
 };
 

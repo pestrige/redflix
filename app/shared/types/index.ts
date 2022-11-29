@@ -6,11 +6,12 @@ export {
 	Tokens
 } from './auth.interface';
 
-export { TypeNavigate, SearchFormData } from './common.types';
+export { NavigateType, TypeNavigate, SearchFormData } from './common.types';
 
 export { TypeFeatherIconType, TypeMaterialIconType } from './icon.types';
 
 export {
+	Actor,
 	Movie,
 	MovieEditInput,
 	Genre,

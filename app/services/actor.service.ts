@@ -28,7 +28,7 @@ export const ActorService = {
 	},
 
 	async createActor() {
-		return requestApi({
+		return requestApi<string>({
 			url: getActorsUrl('/'),
 			method: 'POST'
 		});
