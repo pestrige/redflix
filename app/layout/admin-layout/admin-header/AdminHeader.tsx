@@ -19,16 +19,16 @@ const AdminHeader: FC<AdminHeaderProps> = ({ title, isBackButton }) => {
 	const menuAnimatedStyles = useAdminHeader(isShown, setIsShown);
 
 	return (
-		<View className='flex-row justify-between items-center z-10 mb-5 '>
+		<View className='flex-row justify-between items-center z-10 mb-5'>
 			<Heading title={title} />
 
-			<View className='relative flex-row '>
+			<View className='relative flex-row'>
 				{isBackButton && (
 					<BlurButton
 						onPress={goBack}
 						icon='chevron-left'
 						size={24}
-						className='w-12 h-12 mr-3'
+						className='mr-3'
 					/>
 				)}
 

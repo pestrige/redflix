@@ -8,11 +8,12 @@ import { BlurButtonProps } from './blur-button.props';
 
 const BlurButton: FC<PropsWithChildren<BlurButtonProps>> = ({
 	children,
-	color = '#fffff',
+	color = '#ffffff',
 	icon,
 	size = 21,
 	style,
 	isSmall = false,
+	className,
 	...rest
 }) => {
 	return (
@@ -22,7 +23,8 @@ const BlurButton: FC<PropsWithChildren<BlurButtonProps>> = ({
 				tint='light'
 				className={cn(
 					' items-center justify-center overflow-hidden',
-					isSmall ? 'w-8 h-8 rounded-lg' : 'w-12 h-12 rounded-2xl'
+					isSmall ? 'w-8 h-8 rounded-lg' : 'w-12 h-12 rounded-2xl',
+					className
 				)}
 				style={style}
 			>

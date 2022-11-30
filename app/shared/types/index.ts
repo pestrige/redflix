@@ -20,4 +20,4 @@ export {
 
 export { TableItem, AdminTableItem } from './table.interface';
 
-export { User } from './user.interface';
+export { User, UserEditInput } from './user.interface';

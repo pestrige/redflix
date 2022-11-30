@@ -5,3 +5,5 @@ export interface User {
 	createdAt: string;
 	isAdmin: boolean;
 }
+
+export interface UserEditInput extends Omit<User, '_id' | 'createdAt'> {}

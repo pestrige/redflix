@@ -15,15 +15,16 @@ export const UserService = {
 
 	async getUserByID(userID?: string) {
 		return requestApi<User>({
-			url: getUsersUrl(`${userID}`),
+			url: getUsersUrl(`/${userID}`),
 			method: 'GET'
 		});
 	},
 
 	async updateUser(userID: string, data: AuthFormData) {
 		return requestApi<string>({
-			url: getUsersUrl(`${userID}`),
-			method: 'PUT'
+			url: getUsersUrl(`/${userID}`),
+			method: 'PUT',
+			data
 		});
 	},
 
