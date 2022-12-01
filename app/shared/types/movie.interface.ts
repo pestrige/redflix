@@ -21,7 +21,9 @@ export interface Genre {
 	description: string;
 }
 
-export interface GenreEditInput extends Omit<Genre, '_id'> {}
+export interface GenreEditInput extends Omit<Genre, '_id'> {
+	icon?: string;
+}
 
 export interface Movie {
 	_id: string;

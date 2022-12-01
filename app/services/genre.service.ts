@@ -38,7 +38,7 @@ export const GenreService = {
 		return requestApi<string>({
 			url: getGenresUrl(`/${id}`),
 			method: 'PUT',
-			data
+			data: { ...data, icon: data?.icon ?? '' }
 		});
 	},
 
