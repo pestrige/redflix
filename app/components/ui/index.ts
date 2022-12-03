@@ -6,6 +6,7 @@ export { default as DismissKeyboard } from './field/DismissKeyboard';
 export { default as DotIcon } from './dot-icon/DotIcon';
 export { default as FavoriteButton } from './favorite-button/FavoriteButton';
 export { default as Field } from './field/Field';
+export { default as FieldUpload } from './field-upload/FieldUpload';
 export { default as FieldWrapperWithButton } from './field/FieldWrapperWithButton';
 export { default as GenreList } from './genre-list/GenreList';
 export { default as Hamburger } from './hamburger/Hamburger';

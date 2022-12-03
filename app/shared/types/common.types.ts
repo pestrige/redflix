@@ -10,3 +10,5 @@ export type TypeNavigate = (screenName: keyof TypeRootStackParamList) => void;
 export interface SearchFormData {
 	searchTerm: string;
 }
+
+export type OnChangeFieldType = (...event: any[]) => void;
