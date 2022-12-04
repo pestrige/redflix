@@ -29,7 +29,7 @@ const VideoPlayer: FC<{ video: string }> = ({ video }) => {
 	return (
 		<>
 			<Button icon='play' className='mb-10' onPress={handlePlayPress}>
-				Watch movie
+				Watch trailer
 			</Button>
 			<View>
 				<Video
