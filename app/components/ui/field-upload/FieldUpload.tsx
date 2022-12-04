@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { FC } from 'react';
 import { Image, Pressable, Text, View } from 'react-native';
 
-import { Loader } from '@app/components/ui';
+import Loader from '@app/components/ui/loader/Loader';
 
 import { getMediaSource } from '@app/utils';
 

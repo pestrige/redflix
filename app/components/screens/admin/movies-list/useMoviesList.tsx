@@ -1,5 +1,5 @@
 import { TypeRootStackParamList } from '@app/navigation/navigation.types';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import Toast from 'react-native-toast-message';
 
@@ -23,9 +23,10 @@ const formatMovies = (movies: Movie[], navigate: NavigateType): TableItem[] =>
 export const useMoviesList = () => {
 	const { debouncedSearchTerm, control } = useSearchForm();
 	const { navigate } = useTypedNavigation();
+	const queryClient = useQueryClient();
 
 	const queryData = useQuery(
-		['search-movies', debouncedSearchTerm],
+		['get-movies', debouncedSearchTerm],
 		() => MovieService.getAllMovies(debouncedSearchTerm),
 		{ select: (data) => formatMovies(data, navigate) }
 	);
@@ -56,7 +57,7 @@ export const useMoviesList = () => {
 					text1: 'Delete movie',
 					text2: 'delete was successful'
 				});
-				await queryData.refetch();
+				await queryClient.invalidateQueries(['get-movies']);
 			}
 		}
 	);

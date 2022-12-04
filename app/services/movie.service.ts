@@ -15,7 +15,7 @@ export const MovieService = {
 
 	async getMovieByID(id: string) {
 		return requestApi<MovieEditInput>({
-			url: getMoviesUrl(`/by-id /${id}`),
+			url: getMoviesUrl(`/${id}`),
 			method: 'GET'
 		});
 	},
@@ -60,7 +60,7 @@ export const MovieService = {
 		return requestApi<string>({
 			url: getMoviesUrl(`/${id}`),
 			method: 'PUT',
-			data
+			data: { ...data, bigPoster: data.poster }
 		});
 	},
 

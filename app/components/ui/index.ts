@@ -4,6 +4,7 @@ export { default as Button } from './button/Button';
 export { default as CreateButton } from './create-button/CreateButton';
 export { default as DismissKeyboard } from './field/DismissKeyboard';
 export { default as DotIcon } from './dot-icon/DotIcon';
+export { default as Dropdown } from './dropdown/Dropdown';
 export { default as FavoriteButton } from './favorite-button/FavoriteButton';
 export { default as Field } from './field/Field';
 export { default as FieldUpload } from './field-upload/FieldUpload';
