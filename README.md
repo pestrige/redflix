@@ -17,7 +17,7 @@ Mobile app with a movie catalog and admin panel
  - Animated movie screen 
  - Favorites movies with adding/removing feature
  - Upload photos and videos
- - Text editor with
+ - Text editor with text styling (bold/italic/etc)
  
  ## App screencast
 https://user-images.githubusercontent.com/63608069/205673353-5175c1f7-3aa9-44c1-babf-ea1760c13c00.mp4
